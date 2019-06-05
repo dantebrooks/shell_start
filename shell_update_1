@@ -1,0 +1,25 @@
+from random import randint
+from Tkinter import *
+
+# sentence correction
+# creates question objects that possess a question (string), a correct answer (string) and wrong answers (array of strings)
+class classic_question():
+    # class constructor
+    def __init__(self, question, correct, wrong):
+        self.question = question
+        self.correct = correct
+        self.wrong = wrong
+
+    def classic_question_pull():
+        print question_list[randint(0, len(question_list))]
+
+# question list contains all questions
+question_list = []
+test= classic_question("mama se () si olvidas su cumplenaos", "enojar", ['feliz', 'triste', 'cansado'])
+question_list.append(test)
+print test.question
+print ""
+print (question_list[0]).question
+print (question_list[0]).correct
+print (question_list[0]).wrong
+print (question_list[0]).wrong[0]
