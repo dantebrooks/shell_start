@@ -1,0 +1,139 @@
+from random import randint
+from Tkinter import *
+
+# sentence correction
+# creates question objects that possess a question (string), a correct answer (string) and wrong answers (array of strings)
+class classic_question():
+    # class constructor
+    def __init__(self, question, correct, wrong):
+        self.question = question
+        self.correct = correct
+        self.wrong = wrong
+
+    def classic_question_pull():
+        print question_list[randint(0, len(question_list))]
+class your_answers():
+    def __init__(self, answer):
+        self.answer = answer
+
+# question list contains all questions, corect answers and wrong answers
+question_list = []
+test = classic_question("mama se () si olvidas su cumpleanos", "enojar, ", ['feliz, ', 'triste, ', 'cansado'])
+test2 = classic_question("Como quieres ()", "hacer, ", ['hice, ', 'hara, ', 'hacen, '])
+test3 = classic_question("Tengo un examen en dos semana, debo ()", "estudiar, ", ['jugar, ', 'dormir, ', 'morir, '])
+test4 = classic_question("Si hoy es Domingo, entonces ayer fue ()", "Sabado, ", ['Lunes, ', 'Viernes, ', 'Miercoles, '])
+test5 = classic_question("Cuantas horas es un dia? ()", "veinte-cuatro, ", ['diez, ', 'cinco, ', 'trece, '])
+test6 = classic_question("Si es 'yo como' entonces es ella ()", "come, ", ['comes, ', 'coma, ', 'comemos, '])
+test7 = classic_question("Cual de estes es un deporte?()", "balancesto, ", ['cantado, ', 'videojuegos, ', 'escribiendo, '])
+test8 = classic_question("() haces ejercicios cada Sabado", "Tu, ", ['Ti, ', 'El, ', 'Le, '])
+test9 = classic_question(" Si tengo 10 bananas y como 3 cuanto tengo ahora?", "siete, ", ['seis, ', 'setenta, ', 'sesenta, '])
+test10 = classic_question("Cual nombre tiene el mas de las letras? ()", "atentamente", ['progresiva, ', 'realmente, ', 'mejoramente, '])
+question_list.append(test)
+question_list.append(test2)
+question_list.append(test3)
+question_list.append(test4)
+question_list.append(test5)
+question_list.append(test6)
+question_list.append(test7)
+question_list.append(test8)
+question_list.append(test9)
+question_list.append(test10)
+#Answer list contains bot correct and incorrect answers for each question
+answer_list = []
+ans = your_answers(question_list[0].correct + question_list[0].wrong[0] + question_list[0].wrong[1] + question_list[0].wrong[2])
+ans2 = your_answers(question_list[1].wrong[2] + question_list[1].wrong[0] + question_list[1].correct + question_list[1].wrong[1])
+ans3 = your_answers(question_list[2].wrong[1] + question_list[2].wrong[2] + question_list[2].wrong[0] + question_list[2].correct)
+ans4 = your_answers(question_list[3].wrong[0] + question_list[3].correct + question_list[3].wrong[1] + question_list[3].wrong[2])
+ans5 = your_answers(question_list[4].wrong[2] + question_list[4].wrong[1] + question_list[4].correct + question_list[4].wrong[0])
+ans6 = your_answers(question_list[5].wrong[1] + question_list[5].wrong[2] + question_list[5].correct + question_list[5].wrong[0])
+ans7 = your_answers(question_list[6].wrong[2] + question_list[6].wrong[0] + question_list[6].correct + question_list[6].wrong[1])
+ans8 = your_answers(question_list[7].correct + question_list[7].wrong[0] + question_list[7].wrong[1] + question_list[7].wrong[2])
+ans9 = your_answers(question_list[8].wrong[2] + question_list[8].wrong[1] + question_list[8].correct + question_list[8].wrong[0])
+ans10 = your_answers(question_list[9].wrong[0] + question_list[9].correct + question_list[9].wrong[1] + question_list[9].wrong[2])
+answer_list.append(ans)
+answer_list.append(ans2)
+answer_list.append(ans3)
+answer_list.append(ans4)
+answer_list.append(ans5)
+answer_list.append(ans6)
+answer_list.append(ans7)
+answer_list.append(ans8)
+answer_list.append(ans9)
+answer_list.append(ans10)
+print ""
+score = 0
+for i in range(len(question_list)):
+    print("Q) " + question_list[i].question)
+    print("Choose 1,2,3 or 4 for your answer: ")
+    print(answer_list[i].answer)
+    if i == 0:
+        if input() == 1:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 1:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 2:
+        if input() == 4:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 3:
+        if input() == 2:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 4:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==5:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==6:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==7:
+        if input() == 1:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==8:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==9:
+        if input() == 2:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+        print ("You've recieved " + str(score) + " out of 10 points!" )
