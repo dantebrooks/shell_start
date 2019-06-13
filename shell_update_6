@@ -1,0 +1,250 @@
+from random import randint
+from Tkinter import *
+
+# sentence correction
+# creates question objects that possess a question (string), a correct answer (string) and wrong answers (array of strings)
+class classic_question():
+    # class constructor
+    def __init__(self, question, correct, wrong):
+        self.question = question
+        self.correct = correct
+        self.wrong = wrong
+
+    def classic_question_pull():
+        print question_list[randint(0, len(question_list))]
+class your_answers():
+    def __init__(self, answer):
+        self.answer = answer
+
+# question list contains all questions, corect answers and wrong answers
+question_list = []
+test = classic_question("mama se () si olvidas su cumpleanos", "enojar, ", ['feliz, ', 'triste, ', 'cansado'])
+test2 = classic_question("Como quieres ()", "hacer, ", ['hice, ', 'hara, ', 'hacen, '])
+test3 = classic_question("Tengo un examen en dos semana, debo ()", "estudiar, ", ['jugar, ', 'dormir, ', 'morir, '])
+test4 = classic_question("Si hoy es Domingo, entonces ayer fue ()", "Sabado, ", ['Lunes, ', 'Viernes, ', 'Miercoles, '])
+test5 = classic_question("Cuantas horas es un dia? ()", "veinte-cuatro, ", ['diez, ', 'cinco, ', 'trece, '])
+test6 = classic_question("Si es 'yo como' entonces es ella ()", "come, ", ['comes, ', 'coma, ', 'comemos, '])
+test7 = classic_question("Cual de estes es un deporte?()", "balancesto, ", ['cantado, ', 'videojuegos, ', 'escribiendo, '])
+test8 = classic_question("() haces ejercicios cada Sabado", "Tu, ", ['Ti, ', 'El, ', 'Le, '])
+test9 = classic_question(" Si tengo 10 bananas y como 3 cuanto tengo ahora?", "siete, ", ['seis, ', 'setenta, ', 'sesenta, '])
+test10 = classic_question("Cual nombre tiene el mas de las letras? ()", "atentamente", ['progresiva, ', 'realmente, ', 'mejoramente, '])
+test11 = classic_question("Para esta clase necesitas un lapiz, pluma, y ()", "papel", ['dinero, ', 'mochila, ', 'escritorio, '])
+test12 = classic_question("Si esta enferma debe ir a ()", "el doctor", ['veterinario, ', 'biologa, ', 'sacerdote, '])
+test13 = classic_question("quien tiene la mayor autoridad ()", "el presidente", ['gobernador, ', 'alcalde, ', 'sacerdote, '])
+test14 = classic_question("Que es un organo vital ()", "el corazon", ['orejas, ', 'ojos, ', 'apendice, '])
+test15 = classic_question("Cuba es()", "comunista", ['democratica, ', 'facista, ', 'sociolista, '])
+test16 = classic_question("Los Estados Unidos tienen() estados", "cinquenta", ['cuarenta, ', 'quince, ', 'trece, '])
+test17 = classic_question("Que mes tiene menos deas() ", "febrero", ['mayo, ', 'julio, ', 'deciembre, '])
+test18 = classic_question("Que paes no tiene el espanol como idioma oficial?() ", "brazil", ['venezuela, ', 'cuba, ', 'argentina, '])
+test19 = classic_question("(La hija de tu tia es tu) ", "prima", ['primo, ', 'hija, ', 'relativa, '])
+test20 = classic_question("Cual es la pregunta numero?() ", "veinte", ['diecinueve, ', 'doscientos, ', 'veinte-uno, '])
+
+question_list.append(test)
+question_list.append(test2)
+question_list.append(test3)
+question_list.append(test4)
+question_list.append(test5)
+question_list.append(test6)
+question_list.append(test7)
+question_list.append(test8)
+question_list.append(test9)
+question_list.append(test10)
+question_list.append(test11)
+question_list.append(test12)
+question_list.append(test13)
+question_list.append(test14)
+question_list.append(test15)
+question_list.append(test16)
+question_list.append(test17)
+question_list.append(test18)
+question_list.append(test19)
+question_list.append(test20)
+#Answer list contains bot correct and incorrect answers for each question
+answer_list = []
+ans = your_answers(question_list[0].correct + question_list[0].wrong[0] + question_list[0].wrong[1] + question_list[0].wrong[2])
+ans2 = your_answers(question_list[1].wrong[2] + question_list[1].wrong[0] + question_list[1].correct + question_list[1].wrong[1])
+ans3 = your_answers(question_list[2].wrong[1] + question_list[2].wrong[2] + question_list[2].wrong[0] + question_list[2].correct)
+ans4 = your_answers(question_list[3].wrong[0] + question_list[3].correct + question_list[3].wrong[1] + question_list[3].wrong[2])
+ans5 = your_answers(question_list[4].wrong[2] + question_list[4].wrong[1] + question_list[4].correct + question_list[4].wrong[0])
+ans6 = your_answers(question_list[5].wrong[1] + question_list[5].wrong[2] + question_list[5].correct + question_list[5].wrong[0])
+ans7 = your_answers(question_list[6].wrong[2] + question_list[6].wrong[0] + question_list[6].correct + question_list[6].wrong[1])
+ans8 = your_answers(question_list[7].correct + question_list[7].wrong[0] + question_list[7].wrong[1] + question_list[7].wrong[2])
+ans9 = your_answers(question_list[8].wrong[2] + question_list[8].wrong[1] + question_list[8].correct + question_list[8].wrong[0])
+ans10 = your_answers(question_list[9].wrong[0] + question_list[9].correct + question_list[9].wrong[1] + question_list[9].wrong[2])
+ans11 = your_answers(question_list[0].correct + question_list[0].wrong[0] + question_list[0].wrong[1] + question_list[0].wrong[2])
+ans12 = your_answers(question_list[1].wrong[2] + question_list[1].wrong[0] + question_list[1].correct + question_list[1].wrong[1])
+ans13 = your_answers(question_list[2].wrong[1] + question_list[2].wrong[2] + question_list[2].wrong[0] + question_list[2].correct)
+ans14 = your_answers(question_list[3].wrong[0] + question_list[3].correct + question_list[3].wrong[1] + question_list[3].wrong[2])
+ans15 = your_answers(question_list[4].wrong[2] + question_list[4].wrong[1] + question_list[4].correct + question_list[4].wrong[0])
+ans16 = your_answers(question_list[5].wrong[1] + question_list[5].wrong[2] + question_list[5].correct + question_list[5].wrong[0])
+ans17 = your_answers(question_list[6].wrong[2] + question_list[6].wrong[0] + question_list[6].correct + question_list[6].wrong[1])
+ans18 = your_answers(question_list[7].correct + question_list[7].wrong[0] + question_list[7].wrong[1] + question_list[7].wrong[2])
+ans19 = your_answers(question_list[8].wrong[2] + question_list[8].wrong[1] + question_list[8].correct + question_list[8].wrong[0])
+ans20 = your_answers(question_list[9].wrong[0] + question_list[9].correct + question_list[9].wrong[1] + question_list[9].wrong[2])
+answer_list.append(ans)
+answer_list.append(ans2)
+answer_list.append(ans3)
+answer_list.append(ans4)
+answer_list.append(ans5)
+answer_list.append(ans6)
+answer_list.append(ans7)
+answer_list.append(ans8)
+answer_list.append(ans9)
+answer_list.append(ans10)
+answer_list.append(ans11)
+answer_list.append(ans12)
+answer_list.append(ans13)
+answer_list.append(ans14)
+answer_list.append(ans15)
+answer_list.append(ans16)
+answer_list.append(ans17)
+answer_list.append(ans18)
+answer_list.append(ans19)
+answer_list.append(ans20)
+print ""
+score = 0
+for i in range(len(question_list)):
+    print("Q) " + question_list[i].question)
+    print("Choose 1,2,3 or 4 for your answer: ")
+    print(answer_list[i].answer)
+    if i == 0:
+        if input() == 1:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 1:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 2:
+        if input() == 4:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 3:
+        if input() == 2:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 4:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==5:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==6:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==7:
+        if input() == 1:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==8:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i ==9:
+        if input() == 2:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 0:
+        if input() == 1:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 1:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 2:
+        if input() == 4:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 3:
+        if input() == 2:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 4:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 5:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 6:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 7:
+        if input() == 1:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 8:
+        if input() == 3:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+    if i == 9:
+        if input() == 2:
+            print("Correct")
+            score = score + 1
+        else:
+            print ("Sorry, your incorrect")
+        print("The Correct answer was " + question_list[i].correct)
+        print ("You've recieved " + str(score) + " out of 10 points!" )
